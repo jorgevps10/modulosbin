@@ -21,7 +21,7 @@ msg -bar
 read -p " SELECIONE UNA OPCION : " opci
 case $opci in
 
-1) wget https://raw.githubusercontent.com/jorgevps10/prueba7/main/install.sh && chmod 777 install.sh && ./install.sh
+1) bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/modulosbin/main/innstaladorudpprueba2.bin)
 msg -bar
 msg -ne "Enter Para Continuar" && read enter
 psimen
