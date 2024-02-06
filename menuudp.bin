@@ -8,11 +8,11 @@ tput clear
 psimen () {
 tput clear  
 echo
-[[ $(ps x | grep udpcustom | grep -v grep | awk '{print $1}') ]] && uda=$on || uda=$off
+[[ $(ps x | grep udpcustom | grep -v grep | awk '{print $1}') ]] && udpa=$on || udpa=$off
 msg -bar
 echo -e "\033[1;32m       MENU VIP UDP CUSTOM By @ZubZer3       \033[0m"
 msg -bar
-echo -e "\033[1;32m [1] \033[1;33mINSTALAR UDP CUSTOM \033[0m" $ada"
+echo -e "\033[1;32m [1] \033[1;33mINSTALAR UDP CUSTOM \033[0m" $adpa"
 echo -e "\033[1;32m [2] \033[1;33mINICIAR PANEL ADM CUSTOM \033[0m"
 echo -e "\033[1;32m [3] \033[1;33mDESINSTALAR UDP CUSTOM \033[0m"
 #echo -e "\033[1;32m [4] \033[1;33mDESINSTALAR UDP CUSTOM \033[0m"
