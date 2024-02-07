@@ -9,7 +9,7 @@ psimen () {
 tput clear  
 echo
 msg -bar
-echo -e "\033[1;32m       MENU VIP UDP CUSTOM By @ZubZer3       \033[0m"
+echo -e "\033[1;32m       MENU VIP UDP CUSTOM By HELLBOY VPS      \033[0m"
 msg -bar
 echo -e "\033[1;32m [1] \033[1;33mINSTALAR UDP CUSTOM \033[0m" 
 echo -e "\033[1;32m [2] \033[1;33mINICIAR PANEL ADM CUSTOM \033[0m"
