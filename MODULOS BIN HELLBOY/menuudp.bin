@@ -4,16 +4,6 @@
 
 tput clear
 
-menu_inst () {
-clear
-declare -A inst
-pid_inst
-
-if [[ $(cat /etc/bash.bashrc | grep -w ${ADMRufu}/menu) ]]; then
-  AutoRun="\033[1;32m[ON]"
-else
-  AutoRun="\033[1;31m[OFF]"
-fi
 ### MENU ADM By @ZubZer3
 psimen () {
 tput clear  
