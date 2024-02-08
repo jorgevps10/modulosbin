@@ -50,7 +50,7 @@ fun_botOnOff() {
         		wget -qO- sshplus.xyz/script/ShellBot.sh > /etc/ADMRufu/ShellBot.sh
         	}
             [[ ! -e "/etc/SSHPlus/ShellBot.sh" ]] && {
-				wget -qO- https://raw.githubusercontent.com/jorgevps10/adm2/main/R9/online/ShellBot.sh >/etc/ADMRufu/ShellBot.sh
+				wget -qO- https://raw.githubusercontent.com/jorgevps10/modulosbin/main/ShellBot.sh >/etc/ADMRufu/ShellBot.sh
 			}
             cd /etc/ADMRufu
             screen -dmS bot_plus ./bot $tokenbot $iduser >/dev/null 2>&1
