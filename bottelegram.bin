@@ -21,7 +21,7 @@ msg -bar
 read -p " SELECIONE UNA OPCION : " opci
 case $opci in
 
-1) bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/modulosbin/main/botssh.bin)
+1) bash <(curl -sL https://raw.githubusercontent.com/jorgevps10/modulosbin/main/botssh)
 msg -bar
 msg -ne "Enter Para Continuar" && read enter
 psimen
