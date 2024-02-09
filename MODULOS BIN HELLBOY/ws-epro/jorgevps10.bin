@@ -10,7 +10,7 @@ RESET='\033[0m'
 display_header() {
     clear
     echo -e "${YELLOW}=========================================="
-    echo -e "   MENU INSTALADOR WS-EPRO By @ZubZer3"
+    echo -e "   MENU INSTALADOR WS-EPRO By @HellBoyVps"
     echo -e "==========================================${RESET}"
     echo
 }
