@@ -57,7 +57,7 @@ psimen
 ;;
 
 0)
-menu3
+return 3
 ;;
 
 *) psimen;;
