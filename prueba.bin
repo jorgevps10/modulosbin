@@ -1,27 +1,41 @@
 #!/bin/bash
-#20/12/2023
-#UDP PROTOCOLO
 
-tput clear
+#DEFINIR COLORES  DEL MENU
+RED="\034[0;31"
+BLUE="\033[0;34"
+BLANCO="\033[1;37"
+bar="${GREEN}"
 
-### MENU ADM By @ZubZer3
-psimen () {
-tput clear  
+#TITULO
+cabecera() {
+echo -e "-bar"
+echo -e "${BLANCO} PANEL ADM NICO"
+echo -e "-bar"
 echo
-msg -bar
-echo -e "\033[1;32m       MENU VIP UDP CUSTOM By @ZubZer3       \033[0m"
-msg -bar
-echo -e "\033[1;32m [1] \033[1;33mINSTALAR UDP CUSTOM \033[0m"
-echo -e "\033[1;32m [2] \033[1;33mINICIAR PANEL ADM CUSTOM \033[0m"
-echo -e "\033[1;32m [3] \033[1;33mDESINSTALAR UDP CUSTOM \033[0m"
-#echo -e "\033[1;32m [4] \033[1;33mDESINSTALAR UDP CUSTOM \033[0m"
-msg -bar
-echo -e "\033[1;32m [0] \033[1;31m SALIR DEL MENU \033[0m"
-msg -bar
-read -p " SELECIONE UNA OPCION : " opci
-case $opci in
 
-esac
 }
 
-psimen
+#MENU PRINCIPAL
+menu_principal () {
+display_header
+echo -e "${BLANCO} [1] ${GREEN} INSTALADOR"
+echo -e "${BLANCO} [2] ${GREEN} DESINSTALADOR"
+echo
+read -p "SELECIONE UNA OPCION : " option
+
+case $option in
+ 1) instalador ;;
+ 2) desinstalador ;;
+ 0) exit ;;
+ *) echo -e "${RED} Opcion invalida" ;;
+
+esac
+
+echo -ne "${GREEN} Enter para continuar"
+
+read -r enter
+
+menu_principal
+
+}
+
