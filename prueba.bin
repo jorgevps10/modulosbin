@@ -58,6 +58,5 @@ if [ -f $file_pass ]; then
 	    else
     define
 fi
-msg
-menu
+
 
