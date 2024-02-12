@@ -6,14 +6,6 @@ BLUE="\033[0;34"
 BLANCO="\033[1;37"
 bar="${GREEN}"
 
-#TITULO
-main_title() {
-echo -e "-bar"
-echo -e "${BLANCO} PANEL ADM NICO"
-echo -e "-bar"
-echo
-
-}
 
 #MENU PRINCIPAL
 main_menu() {
