@@ -18,16 +18,22 @@ bar1="\e[1;30m◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚◚
 bar2="\033[38;5;226m---------------------------------------------------------\033[0m"
 bar3="\033[38;5;226m--------------------- = MENU = --------------------------\033[0m"
 
- msg bar2
-echo -e "\033[1;32m [1] \033[1;33mINSTALAR UDP CUSTOM \033[0m"
-echo -e "\033[1;32m [2] \033[1;33mINICIAR PANEL ADM CUSTOM \033[0m"
-echo -e "\033[1;32m [3] \033[1;33mDESINSTALAR UDP CUSTOM \033[0m"
-#echo -e "\033[1;32m [4] \033[1;33mDESINSTALAR UDP CUSTOM \033[0m"
-msg -bar2
-echo -e "\033[1;32m [0] \033[1;31m SALIR DEL MENU \033[0m"
-bar2
-read -p " SELECIONE UNA OPCION : " opci
-case $opci in
-
+menu () {
+  clear
+echo -e "${melon}               == Token Auth == (${amarillo}onlycode${cierre}${melon})
+${bar1}
+${morado}TOTAL DE REGISTROS: ${rojo}>${cierre} ${azul}ID: ${blanco}$No_token  ${cierre}
+${bar3}
+${azul}[1]${cierre} ${rojo}>${cierre} ${blanco}Agregar ${verdeR}ID${cierre}
+${azul}[2]${cierre} ${rojo}>${cierre} ${blanco}Eliminar ${rojo}ID${cierre}
+${azul}[3]${cierre} ${rojo}>${cierre} ${blanco}Editar Expiracion ${verde}ID${cierre}
+${azul}[4]${cierre} ${rojo}>${cierre} ${blanco}Lista de ${verde}ID${cierre}
+${azul}[5]${cierre} ${rojo}>${cierre} ${blanco}Eliminar ${verde}ID ${blanco}Expirados${cierre}
+${azul}[6]${cierre} ${rojo}>${cierre} ${blanco}Informacion de Clientes${cierre}
+${azul}[7]${cierre} ${rojo}>${cierre} ${blanco}Token ${verdeR}Activos${cierre}
+${azul}[0]${cierre} ${rojo}>${cierre} ${rojo}SALIR${cierre}
+${bar2}"
+read -p "$(echo -e "${blanco}seleccione [0-7]:${cierre}")" selection
+case "$selection" in
 
 
