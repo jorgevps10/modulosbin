@@ -1,7 +1,6 @@
 #!/bin/bash
 
 #DEFINIR COLORES  DEL MENU
-GREEN= "\033[0;32"
 RED="\034[0;31"
 BLUE="\033[0;34"
 BLANCO="\033[1;37"
@@ -27,17 +26,16 @@ read -p "SELECIONE UNA OPCION : " option
 case $option in
  1) instalador ;;
  2) desinstalador ;;
-0) exit ;;
-*) echo -e "${RED} Opcion invalida" ;;
+ 0) exit ;;
+ *) echo -e "${RED} Opcion invalida" ;;
 
 esac
 
 echo -ne "${GREEN} Enter para continuar"
 
 read -r enter
+
 menu_principal
+
 }
-
-
-
 
