@@ -7,7 +7,7 @@ BLANCO="\033[1;37"
 bar="${GREEN}"
 
 #TITULO
-cabecera() {
+main_title() {
 echo -e "-bar"
 echo -e "${BLANCO} PANEL ADM NICO"
 echo -e "-bar"
@@ -16,7 +16,7 @@ echo
 }
 
 #MENU PRINCIPAL
-menu_principal () {
+main_menu() {
 display_header
 echo -e "${BLANCO} [1] ${GREEN} INSTALADOR"
 echo -e "${BLANCO} [2] ${GREEN} DESINSTALADOR"
