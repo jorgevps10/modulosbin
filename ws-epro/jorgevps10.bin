@@ -1,11 +1,11 @@
 #!/bin/bash
 
 #DEFINIR COLORES  DEL MENU
-GREEN= '\e[0;32'
-RED='\e[0;31'
-BLUE='\e[0;34'
-BLANCO='\e[1;37'
--bar="${GREEN}******************"
+GREEN= "\033[0;32"
+RED="\034[0;31"
+BLUE="\033[0;34"
+BLANCO="\033[1;37"
+bar="${GREEN}******************"
 
 #TITULO
 cabecera() {
