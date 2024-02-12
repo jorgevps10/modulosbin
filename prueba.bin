@@ -15,9 +15,7 @@ echo
 
 }
 
-#MENU PRINCIPAL
-menu_principal () {
-display_header
+--------------MENU PRINCIPAL------------------
 echo -e "${BLANCO} [1] ${GREEN} INSTALADOR"
 echo -e "${BLANCO} [2] ${GREEN} DESINSTALADOR"
 echo
