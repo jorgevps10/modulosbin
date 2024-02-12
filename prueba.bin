@@ -1,5 +1,4 @@
 #!/bin/bash
-
 #DEFINIR COLORES  DEL MENU
 RED="\034[0;31"
 BLUE="\033[0;34"
@@ -9,7 +8,6 @@ bar="${GREEN}"
 
 #MENU PRINCIPAL
 main_menu() {
-display_header
 echo -e "${BLANCO} [1] ${GREEN} INSTALADOR"
 echo -e "${BLANCO} [2] ${GREEN} DESINSTALADOR"
 echo
