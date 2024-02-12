@@ -5,7 +5,7 @@ GREEN= "\033[0;32"
 RED="\034[0;31"
 BLUE="\033[0;34"
 BLANCO="\033[1;37"
-bar="${GREEN}******************"
+bar="${GREEN}"
 
 #TITULO
 cabecera() {
