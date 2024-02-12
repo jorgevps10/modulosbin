@@ -25,7 +25,7 @@ echo -ne "${GREEN} Enter para continuar"
 
 read -r enter
 
-menu_principal
+main_menu
 
 }
 
