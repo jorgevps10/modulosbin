@@ -4,16 +4,6 @@
 RED="\034[0;31"
 BLUE="\033[0;34"
 BLANCO="\033[1;37"
-bar="${GREEN}"
-
-#TITULO
-cabecera() {
-echo -e "-bar"
-echo -e "${BLANCO} PANEL ADM NICO"
-echo -e "-bar"
-echo
-
-}
 
 --------------MENU PRINCIPAL------------------
 echo -e "${BLANCO} [1] ${GREEN} INSTALADOR"
