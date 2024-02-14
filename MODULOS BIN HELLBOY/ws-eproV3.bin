@@ -41,7 +41,6 @@ menu_principal() {
 	read -p "Ingre una opcion: " option
 
 	case $option in 
-                clear
 		1) activar_ws-epro ;;
 		2) mod_port ;;
 		3) desactivate ;;
@@ -50,6 +49,7 @@ menu_principal() {
 	esac
     echo -e $bar
 	echo -e "${BLANCO} Enter para continuar"
+    echo -e $bar
 	read -r Enter
 	menu_principal
 }
