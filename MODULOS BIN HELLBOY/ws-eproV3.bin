@@ -27,7 +27,7 @@ display_header() {
 clear
 echo -e $bar1
 echo -e  "${VERDE}       MENU ADM WS-EPRO By @HellBoyVps         ${RESET}"
-echo -e $bar1
+echo -e $bar1 ${RESET}
 }
 
 #MENU PRINCIPAL
@@ -47,9 +47,8 @@ menu_principal() {
 		0) exit ;;
 		*)echo -e "${ROJO} Ingrese una opcion valida..." ;;
 	esac
-    echo -e $bar
+        echo -e $bar
 	echo -e "${BLANCO} Enter para continuar"
-    echo -e $bar
 	read -r Enter
 	menu_principal
 }
