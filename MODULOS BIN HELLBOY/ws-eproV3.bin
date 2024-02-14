@@ -25,7 +25,7 @@ opcion="ACTIVAR WS-EPR"
 
 display_header() {
 clear
-echo -e $bar1
+echo -e $bar1 ${RESET}
 echo -e  "${VERDE}       MENU ADM WS-EPRO By @HellBoyVps         ${RESET}"
 echo -e $bar1 ${RESET}
 }
