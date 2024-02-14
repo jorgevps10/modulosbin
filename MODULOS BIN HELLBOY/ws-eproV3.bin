@@ -41,6 +41,7 @@ menu_principal() {
 	read -p "Ingre una opcion: " option
 
 	case $option in 
+                clear
 		1) activar_ws-epro ;;
 		2) mod_port ;;
 		3) desactivate ;;
