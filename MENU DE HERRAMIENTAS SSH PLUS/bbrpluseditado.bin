@@ -1,12 +1,5 @@
 #!/bin/bash
 bar="━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-
-clear
-ll="/usr/local/include/snaps" && [[ ! -d ${ll} ]] && exit
-l="/usr/local/lib/sped" && [[ ! -d ${l} ]] && exit
-PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
-export PATH
-
 remove_all(){
 sed -i '/net.core.default_qdisc/d' /etc/sysctl.conf
 sed -i '/net.ipv4.tcp_congestion_control/d' /etc/sysctl.conf
