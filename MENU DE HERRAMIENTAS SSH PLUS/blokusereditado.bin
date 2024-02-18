@@ -47,31 +47,32 @@ _ons=$(ps -x | grep sshd | grep -v root | grep priv | wc -l)
 [[ -e /etc/openvpn/openvpn-status.log ]] && _onop=$(grep -c "10.8.0" /etc/openvpn/openvpn-status.log) || _onop="0"
 [[ -e /etc/default/dropbear ]] && _drp=$(ps aux | grep dropbear | grep -v grep | wc -l) _ondrp=$(($_drp - 1)) || _ondrp="0"
 _onli=$(($_ons + $_onop + $_ondrp))
-echo $bar
 echo -e "\033[1;33m• \033[1;36mUSUARIOS REGISTRADOS\033[1;37m $_tuser"
 echo -e "\033[1;33m• \033[1;32mUSUARIOS EN LINEA\033[1;37m: $_onli"  
 echo -e "\033[1;33m• \033[1;31mUSUARIOS EXPIRADOS\033[1;37m: $_expuser \033[1;33m•\033[0m"
-echo ""
+echo $bar
 echo "➡️ ESCRIBA EL NOMBRE DEL USUARIO A BLOQUEAR : "; read lock
 passwd -l $lock && echo "$lock" >> /root/bloqueado
 echo $bar
 echo -e "\033[1;34m\033[1;37m\033[1;34m\033[1;37m \033[1;33mUSUÁRIO BLOQUEADO COM SUCESSO \033[0;32m"
 echo $bar
-echo -e ""
-echo -ne "\n\033[1;33mENTER \033[1;33mPARA VOLVER AL \033[1;33mMENU!\033[0m"; read
+echo -ne "Enter Para Continuar" && read enter
 
 }
 #DESBLOQUEAR USUARIOS
 desbloqueo () {
 clear
+echo $bar
 cat /root/bloqueado
-echo " ESCRIBA EL NOMBRE DEL USUARIO A DESBLOQUEAR :   "
+echo $bar
+echo -ne "\033[1;32mEscriba el nombre del usuario a desbloquear: \033[1;33m\033[1;31m\033[1;37m "
 read unlock
 passwd -u  $unlock
+echo $bar
 echo -e "\033[1;34m\033[1;37m\033[1;34m\033[1;37m \033[1;33mUSUÁRIO DESBLOQUEADO CON EXITO \033[0;32m"
 echo -e ""
 echo -e ""
-echo -ne "\n\033[1;33mENTER \033[1;33mPARA VOLTAR AO \033[1;33mMENU!\033[0m"; read
+echo -ne "Enter Para Continuar" && read enter
 }
 
 #PANEL BLOQUEAR USER
@@ -93,7 +94,6 @@ case $option in
       1) 
          clear
          blockuser
-         echo -ne "Enter Para Continuar" && read enter
          clear
          bloquearuser ;;
       2)  
