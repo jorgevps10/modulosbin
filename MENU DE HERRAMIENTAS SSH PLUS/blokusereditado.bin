@@ -99,7 +99,6 @@ case $option in
       2)  
          clear
          desbloqueo
-         echo -ne "Enter Para Continuar" && read enter
          clear
          bbrplus ;;
       0) 
