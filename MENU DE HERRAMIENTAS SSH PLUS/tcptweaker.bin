@@ -7,7 +7,7 @@ then
 	echo -e $bar
 	echo "➜ TCP Tweaker se encuentra instalado en su VPS."
 	echo -e $bar
-	read -p "➜ ¿Desea eliminarlo? [s/n]: " -e -i n resposta0
+	read -p "➜¿Desea eliminarlo? [s/n]: " -e -i n resposta0
 	if [[ "$resposta0" = 's' ]]; then
 		grep -v "^#PH56
 net.ipv4.tcp_window_scaling = 1
