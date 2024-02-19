@@ -28,12 +28,11 @@ sysctl -p /etc/sysctl.conf > /dev/null
 	fi
 else
 	echo ""
-	$bar
+	echo -e $bar
 	echo "    Este cript se encuentra en fase beta"
 	echo "  Esta a punto de modificar valores del vps"
 	echo "Para mejorar latencias y velocidad de internet."
 	echo -e $bar
-	echo ""
 	read -p "¿Continuar con la instalacion? [s/n]: " -e -i n resposta
 	if [[ "$resposta" = 's' ]]; then
 	clear
@@ -55,7 +54,7 @@ echo ""
 sysctl -p /etc/sysctl.conf
 		echo ""
 		echo "A instalado TCP Tweaker con exito."
-		echo $bar
+		echo -e $bar
 	else
 		echo ""
 		echo "Instalacion cancelada."
