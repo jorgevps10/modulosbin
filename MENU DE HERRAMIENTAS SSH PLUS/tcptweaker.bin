@@ -5,9 +5,9 @@ tput setaf 7 ; tput setab 4 ; tput bold ; printf '%35s%s%-20s\n' "TCP Tweaker 1.
 if [[ `grep -c "^#PH56" /etc/sysctl.conf` -eq 1 ]]
 then
 	echo ""
-	echo "TCP Tweaker se encuentra instalado en su VPS."
+	echo "➜ TCP Tweaker se encuentra instalado en su VPS."
 	echo ""
-	read -p "¿Desea eliminarlo? [s/n]: " -e -i n resposta0
+	read -p "➜ ¿Desea eliminarlo? [s/n]: " -e -i n resposta0
 	if [[ "$resposta0" = 's' ]]; then
 		grep -v "^#PH56
 net.ipv4.tcp_window_scaling = 1
@@ -19,8 +19,8 @@ net.ipv4.tcp_low_latency = 1
 net.ipv4.tcp_slow_start_after_idle = 0" /etc/sysctl.conf > /tmp/syscl && mv /tmp/syscl /etc/sysctl.conf
 sysctl -p /etc/sysctl.conf > /dev/null
 		echo ""
-		echo "As configurações de rede do TCP Tweaker foram removidas com sucesso."
-		echo ""
+		echo "➜TCP Tweaker fue eliminado con exito."
+		echo -e $bar
 	exit
 	else 
 		echo ""
@@ -29,36 +29,36 @@ sysctl -p /etc/sysctl.conf > /dev/null
 else
 	echo ""
 	echo -e $bar
-	echo "    Este cript se encuentra en fase beta"
-	echo "  Esta a punto de modificar valores del vps"
-	echo "Para mejorar latencias y velocidad de internet."
+	echo "➜Este cript se encuentra en fase beta"
+	echo "➜Esta a punto de modificar valores del vps"
+	echo "➜Para mejorar latencias y velocidad de internet."
 	echo -e $bar
-	read -p "¿Continuar con la instalacion? [s/n]: " -e -i n resposta
+	read -p "➜ ¿Continuar con la instalacion? [s/n]: " -e -i n resposta
 	if [[ "$resposta" = 's' ]]; then
 	clear
 	echo ""
 	echo -e $bar
-	echo "Se modificaron los siguientes parametros:"
+	echo "➜ Se modificaron los siguientes parametros:"
 	echo -e $bar
 	echo " " >> /etc/sysctl.conf
 	echo "#PH56" >> /etc/sysctl.conf
-echo "net.ipv4.tcp_window_scaling = 1
-net.core.rmem_max = 16777216
-net.core.wmem_max = 16777216
-net.ipv4.tcp_rmem = 4096 87380 16777216
-net.ipv4.tcp_wmem = 4096 16384 16777216
-net.ipv4.tcp_low_latency = 1
-net.ipv4.tcp_slow_start_after_idle = 0" >> /etc/sysctl.conf
-echo $bar
+echo "➜ net.ipv4.tcp_window_scaling = 1
+➜ net.core.rmem_max = 16777216
+➜ net.core.wmem_max = 16777216
+➜ net.ipv4.tcp_rmem = 4096 87380 16777216
+➜ net.ipv4.tcp_wmem = 4096 16384 16777216
+➜ net.ipv4.tcp_low_latency = 1
+➜ net.ipv4.tcp_slow_start_after_idle = 0" >> /etc/sysctl.conf
+echo -e $bar
 echo ""
 sysctl -p /etc/sysctl.conf
 		echo ""
-		echo "A instalado TCP Tweaker con exito."
+		echo "➜ A instalado TCP Tweaker con exito."
 		echo -e $bar
 	else
-		echo ""
-		echo "Instalacion cancelada."
-		echo ""
+		clear
+		echo "➜ Instalacion cancelada."
+		echo -e $bar
 	fi
 fi
 exit
