@@ -49,10 +49,10 @@ echo "➜ net.ipv4.tcp_window_scaling = 1
 ➜ net.ipv4.tcp_wmem = 4096 16384 16777216
 ➜ net.ipv4.tcp_low_latency = 1
 ➜ net.ipv4.tcp_slow_start_after_idle = 0" >> /etc/sysctl.conf
-echo -e $bar
+
 echo ""
 sysctl -p /etc/sysctl.conf
-		echo ""
+		echo -e $bar
 		echo "➜ A instalado TCP Tweaker con exito."
 		echo -e $bar
 	else
