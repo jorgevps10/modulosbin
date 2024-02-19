@@ -32,15 +32,15 @@ else
 	echo "    Este cript se encuentra en fase beta"
 	echo "  Esta a punto de modificar valores del vps"
 	echo "Para mejorar latencias y velocidad de internet."
-	$bar
+	echo -e $bar
 	echo ""
 	read -p "¿Continuar con la instalacion? [s/n]: " -e -i n resposta
 	if [[ "$resposta" = 's' ]]; then
 	clear
 	echo ""
-	$bar
+	echo -e $bar
 	echo "Se modificaron los siguientes parametros:"
-	$bar
+	echo -e $bar
 	echo " " >> /etc/sysctl.conf
 	echo "#PH56" >> /etc/sysctl.conf
 echo "net.ipv4.tcp_window_scaling = 1
