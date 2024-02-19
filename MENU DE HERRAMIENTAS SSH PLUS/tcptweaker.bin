@@ -28,19 +28,19 @@ sysctl -p /etc/sysctl.conf > /dev/null
 	fi
 else
 	echo ""
-	echo $bar
+	$bar
 	echo "    Este cript se encuentra en fase beta"
 	echo "  Esta a punto de modificar valores del vps"
 	echo "Para mejorar latencias y velocidad de internet."
-	echo $bar
+	$bar
 	echo ""
 	read -p "¿Continuar con la instalacion? [s/n]: " -e -i n resposta
 	if [[ "$resposta" = 's' ]]; then
 	clear
 	echo ""
-	echo $bar
+	$bar
 	echo "Se modificaron los siguientes parametros:"
-	echo $bar
+	$bar
 	echo " " >> /etc/sysctl.conf
 	echo "#PH56" >> /etc/sysctl.conf
 echo "net.ipv4.tcp_window_scaling = 1
